@@ -55,7 +55,7 @@ export default {
     '@nuxtjs/axios',
     '@neneos/nuxt-animate.css',
     ['storyblok-nuxt', {
-      accessToken: 'qOR8rxixBwqEai50JQdSgAtt',
+      accessToken: 'CMkBQJU6B0Yltmeq0efyqQtt',
       cacheProvider: 'memory'
     }]
   ],
