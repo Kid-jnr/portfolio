@@ -97,35 +97,46 @@ export default {
     },
 
   head () {
-    return {
-      title: this.filteredPost[0].title,
-      meta: [
-        { hid: 'description', name: 'description', content: this.filteredPost[0].description }
-      ]
-    }
-  },
+        return {
+            title: this.filteredPost[0].title,
+            meta: [
+                { hid: 'description', name: 'description', content: this.filteredPost[0].description }
+            ]
+        }
+    },
 
     computed:{
-    ...mapGetters(['posts']),
+        ...mapGetters(['posts']),
 
-    filteredPost(){
-        return this.posts.filter(item=>{
-            return item.id === this.$route.params.slug
-        })
+        filteredPost(){
+            return this.posts.filter(item=>{
+                return item.id === this.$route.params.slug
+            })
+        },
+
+        richtext() {
+            return this.$storyapi.richTextResolver.render(this.filteredPost[0].body)
+        },
+
+        baseUrl(){
+            return process.env.baseUrl
+        },
+
+        readTime(){
+            return readingTime(this.richtext,{wordsPerMinute: 230}).text
+        }
     },
 
-    richtext() {
-      return this.$storyapi.richTextResolver.render(this.filteredPost[0].body)
-    },
-
-    baseUrl(){
-        return process.env.baseUrl
-    },
-
-    readTime(){
-        return readingTime(this.richtext,{wordsPerMinute: 230}).text
-    }
-  }
+    middleware: [
+        function({store, redirect, route}) {
+            let check = store.state.posts.filter(item=>{
+                    return item.id === route.params.slug
+                })
+            if(check[0] === undefined){
+                return redirect('/')
+            }
+        },
+    ],
 
 
 }
