@@ -1,0 +1,25 @@
+{
+  "name": "myfolio",
+  "version": "1.0.0",
+  "description": "Norman Jnr's portfolio ",
+  "author": "Norman jnr",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@neneos/nuxt-animate.css": "0.0.1",
+    "@nuxtjs/axios": "^5.3.6",
+    "aos": "^3.0.0-beta.6",
+    "gsap": "^3.1.1",
+    "nuxt": "^2.0.0",
+    "reading-time-estimator": "^1.2.0",
+    "storyblok-nuxt": "^1.1.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.0.0"
+  }
+}
