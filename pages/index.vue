@@ -125,6 +125,7 @@ export default {
         {name: 'Git', icon: '', color: '#5B5EA6'},
         {name: 'Lua', icon: '', color: '#42C68E'},
         {name: 'Headless CMS', icon: '', color: '#5B2eA6'},
+        {name: 'Heroku', icon: '', color: '#BE2575'},
         {name: 'Netlify', icon: '', color: 'orange'}
       ],
       familiar:[

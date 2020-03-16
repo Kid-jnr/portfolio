@@ -4,7 +4,7 @@
             <v-col class="" cols="12" sm="8" md="7" lg="6">
                 <v-row class="justify-center mb-5">
                     <v-avatar class="mx-auto" size="180">
-                        <img src="../static/avatar.jpg"/>
+                        <img width="100%" src="../static/avatar.jpg"/>
                     </v-avatar>
                 </v-row>
                 <div class=" text-center text-uppercase font-2 display-3 mb-4" style="color: #2F495E"> HEY WORLD, I'M </div>
