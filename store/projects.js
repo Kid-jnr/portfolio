@@ -15,7 +15,7 @@ export const mutations = {
 export const actions = {
     async getProjects ({commit}){
         try{
-            let res = await axios.get('https://api.storyblok.com/v1/cdn/stories?starts_with=project/&token=CMkBQJU6B0Yltmeq0efyqQtt&version=published')
+            let res = await axios.get('https://api.storyblok.com/v1/cdn/stories?starts_with=project/&token=CMkBQJU6B0Yltmeq0efyqQtt')
 
             let data =  res.data.stories.map(project =>{
                 return{

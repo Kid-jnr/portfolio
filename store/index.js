@@ -16,7 +16,7 @@ export const actions = {
 
     async nuxtServerInit({commit, dispatch},{error}){
         try{
-            let res = await axios.get('https://api.storyblok.com/v1/cdn/stories?starts_with=blog/&token=CMkBQJU6B0Yltmeq0efyqQtt&version=published')
+            let res = await axios.get('https://api.storyblok.com/v1/cdn/stories?starts_with=blog/&token=CMkBQJU6B0Yltmeq0efyqQtt')
 
             let data =  res.data.stories.map(post =>{
                 return{
