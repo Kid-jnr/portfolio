@@ -1,5 +1,9 @@
-const axios = require('axios')
+const StoryblokClient = require('storyblok-js-client');
+
 export const strict = false
+let Storyblok = new StoryblokClient({
+    accessToken: 'CMkBQJU6B0Yltmeq0efyqQtt'
+});
 
 export const state = () => ({
     posts: []
@@ -16,7 +20,7 @@ export const actions = {
 
     async nuxtServerInit({commit, dispatch},{error}){
         try{
-            let res = await axios.get('https://api.storyblok.com/v1/cdn/stories?starts_with=blog/&token=CMkBQJU6B0Yltmeq0efyqQtt')
+            let res = await Storyblok.get('cdn/stories?starts_with=blog/', {version: 'published'} )
 
             let data =  res.data.stories.map(post =>{
                 return{

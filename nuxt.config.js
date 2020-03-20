@@ -18,10 +18,12 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { hid: 'keywords', name: 'keywords', content: 'Norman, Akanegbu, Norman Akanegbu, Akanegbu Norman, Norman-Jnr, Norman Jnr, Norman Portfolio, Akanegbu Norman Portfolio' }
     ],
+    script: [
+      // { src: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js' }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Major+Mono+Display|Quicksand:500,700&display=swap' }
-      
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Major+Mono+Display|Quicksand:500,700&display=swap' },
 
     ]
   },

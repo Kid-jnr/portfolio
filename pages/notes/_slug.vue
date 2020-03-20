@@ -142,6 +142,16 @@ export default {
 }
 </script>
 
+<style>
+
+    .v-application code {
+        background-color: #2d2a2a !important;
+        color: #ffffff !important;
+        box-shadow: none;
+    }
+
+</style>
+
 <style scoped>
 
   .font-1{

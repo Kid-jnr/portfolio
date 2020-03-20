@@ -1,4 +1,8 @@
-const axios = require('axios')
+const StoryblokClient = require('storyblok-js-client');
+
+let Storyblok = new StoryblokClient({
+    accessToken: 'CMkBQJU6B0Yltmeq0efyqQtt'
+});
 
 export const state = () => ({
     projects: []
@@ -15,7 +19,7 @@ export const mutations = {
 export const actions = {
     async getProjects ({commit}){
         try{
-            let res = await axios.get('https://api.storyblok.com/v1/cdn/stories?starts_with=project/&token=CMkBQJU6B0Yltmeq0efyqQtt')
+            let res = await Storyblok.get('cdn/stories?starts_with=project/', {version: 'published'} )
 
             let data =  res.data.stories.map(project =>{
                 return{
