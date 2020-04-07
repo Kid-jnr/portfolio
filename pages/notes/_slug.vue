@@ -1,5 +1,5 @@
 <template>
-    <v-container >
+    <v-container>
         <v-row class="mt-12 pt-8">
             <v-btn
                 :href="'https://www.twitter.com/intent/tweet?text='+this.filteredPost[0].description+'&via=norman_jnr&hashtags='+this.filteredPost[0].tags+'&url='+this.baseUrl + this.$route.fullPath" 
@@ -44,7 +44,7 @@
                 class="mx-auto"
             >
                 <v-container>
-                    <div class="font-3 subtitle-2" style="color: #292929"> {{new Date(filteredPost[0].date).toDateString()}} · {{readTime}} </div>
+                    <div class="font-3 caption" style="color: #292929"> {{new Date(filteredPost[0].date).toDateString()}} · {{readTime}} </div>
                 </v-container>
             </v-col>
 
@@ -127,10 +127,14 @@ export default {
         }
     },
 
+    mounted() {
+        Prism.highlightAll()
+    },
+
     middleware: [
         function({store, redirect, route}) {
-            let check = store.state.posts.filter(item=>{
-                    return item.id === route.params.slug
+            let check = store.state.posts.filter(item=>{                    
+                return item.id === route.params.slug
                 })
             if(check[0] === undefined){
                 return redirect('/')
@@ -141,16 +145,6 @@ export default {
 
 }
 </script>
-
-<style>
-
-    .v-application code {
-        background-color: #2d2a2a !important;
-        color: #ffffff !important;
-        box-shadow: none;
-    }
-
-</style>
 
 <style scoped>
 

@@ -16,13 +16,11 @@
 import navigation from '@/components/NavMain'
 import footerNav from '@/components/footer'
 
-
 export default {
   components:{
     navigation,
     footerNav
-  }
-
+  },
 }
 </script>
 

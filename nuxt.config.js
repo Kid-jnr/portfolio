@@ -23,8 +23,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Major+Mono+Display|Quicksand:500,700&display=swap' },
-
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Major+Mono+Display|Quicksand:500,700&display=swap' }
     ]
   },
   /*
@@ -41,7 +40,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: "@/plugins/aos", ssr: false}
+    {src: "@/plugins/aos", ssr: false},
+    { src: "@/plugins/prism", ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
