@@ -11,13 +11,13 @@
     background-image: unset !important;
 }
 
-.v-application code {
+/* .v-application code { */
     /* background-color: none !important; */
     /* background-color: #282A36 !important; */
     /* color: unset !important; */
     /* box-shadow: none !important; */
     /* font-family: cursive; */
-}
+/* } */
 .v-application code, .v-application kbd {
     display: block !important;
     /*border-radius: 3px;
