@@ -44,7 +44,7 @@
                 class="mx-auto"
             >
                 <v-container>
-                    <div class="font-3 caption" style="color: #292929"> {{new Date(filteredPost[0].date).toDateString()}} · {{readTime}} </div>
+                    <div class="font-3 caption font-weight-black" style="color: #565656;"> {{new Date(filteredPost[0].date).toDateString()}} · {{readTime}} </div>
                 </v-container>
             </v-col>
 
