@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-  /* .font-1{
+  .font-1{
     font-family: 'Quicksand', sans-serif !important;
     font-weight: 500;
   }
@@ -40,6 +40,6 @@ export default {
   .font-3{
       font-family: 'Major Mono Display', cursive !important;
       font-weight: 900;
-  } */
+  }
 
 </style>
