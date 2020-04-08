@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <!-- <v-container fluid class="red pa-0 ma-0"> -->
         <v-row class="mt-12 pt-8">
             <v-btn
                 :href="'https://www.twitter.com/intent/tweet?text='+this.filteredPost[0].description+'&via=norman_jnr&hashtags='+this.filteredPost[0].tags+'&url='+this.baseUrl + this.$route.fullPath" 
@@ -19,11 +19,11 @@
             </v-btn>
             <v-col
                 cols="12"
-                class="mt-8"
+                class="mt-8 mx-auto"
             >
-                <v-container>
-                <h1 class="text-center font-3 display-1" style="color: #292929">{{filteredPost[0].title}} </h1>
-                </v-container>
+                <!-- <v-container> -->
+                <h2 :class="{'display-1 text-center font-3 ': $vuetify.breakpoint.smAndDown, 'display-2 text-center font-3 ': $vuetify.breakpoint.mdAndUp}" style="color: #292929;overflow-wrap: break-word; ">{{filteredPost[0].title}} </h2>
+                <!-- </v-container> -->
             </v-col>
             <v-col
                 cols="12"
@@ -34,7 +34,7 @@
                     <v-img
                         class="mx-auto"
                         :src="filteredPost[0].thumbnail"
-                        max-height="450"
+                        max-height="500"
                     />
                 </v-container>
             </v-col>
@@ -44,13 +44,13 @@
                 class="mx-auto"
             >
                 <v-container>
-                    <div class="font-3 caption font-weight-black" style="color: #565656;"> {{new Date(filteredPost[0].date).toDateString()}} · {{readTime}} </div>
+                    <div :class="{'font-3 overline font-weight-black': $vuetify.breakpoint.smAndDown, 'font-3 caption font-weight-black': $vuetify.breakpoint.mdAndUp}" style="color: #565656;"> {{new Date(filteredPost[0].date).toDateString()}} · {{readTime}} </div>
                 </v-container>
             </v-col>
 
             <v-col
                 cols="12"
-                class="mx-auto"
+                class=""
             >
                 <v-container>
                     <div v-html="richtext" class="font-1 text-justify body-1" style="color: #292929; line-height: 33px"></div>
@@ -81,7 +81,7 @@
                 
             </v-col>
         </v-row>
-    </v-container>
+    <!-- </v-container> -->
 </template>
 
 <script>

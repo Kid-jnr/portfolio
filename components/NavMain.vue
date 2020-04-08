@@ -9,12 +9,12 @@
     >
         <v-row id="scrolling-techniques-8">
             <v-col class="px-0">
-                <v-btn color="orange" text class="black--text font-3" width="100%" to="/" >
+                <v-btn color="orange" tile text class="black--text font-3" width="100%" to="/" >
                     Home
                 </v-btn>
             </v-col>
             <v-col class="px-0 pb-0">
-                <v-btn text color="green" class="black--text font-3" width="100%" to="/notes">
+                <v-btn text color="green" tile class="black--text font-3" width="100%" to="/notes">
                     notes
                 </v-btn>
             </v-col>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-  .font-1{
+  /* .font-1{
     font-family: 'Quicksand', sans-serif !important;
     font-weight: 500;
   }
@@ -40,6 +40,6 @@ export default {
   .font-3{
       font-family: 'Major Mono Display', cursive !important;
       font-weight: 900;
-  }
+  } */
 
 </style>
