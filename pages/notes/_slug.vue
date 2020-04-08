@@ -22,7 +22,7 @@
                 class="mt-8 mx-auto"
             >
                 <!-- <v-container> -->
-                <h2 :class="{'display-1 text-center font-3 ': $vuetify.breakpoint.smAndDown, 'display-2 text-center font-3 ': $vuetify.breakpoint.mdAndUp}" style="color: #292929;overflow-wrap: break-word; ">{{filteredPost[0].title}} </h2>
+                <h2 :class="{'display-1': $vuetify.breakpoint.smAndDown, 'display-2': $vuetify.breakpoint.mdAndUp} " class="font-3 text-center" style="color: #292929;overflow-wrap: break-word; ">{{filteredPost[0].title}} </h2>
                 <!-- </v-container> -->
             </v-col>
             <v-col
@@ -44,7 +44,7 @@
                 class="mx-auto"
             >
                 <v-container>
-                    <div :class="{'font-3 overline font-weight-black': $vuetify.breakpoint.smAndDown, 'font-3 caption font-weight-black': $vuetify.breakpoint.mdAndUp}" style="color: #565656;"> {{new Date(filteredPost[0].date).toDateString()}} · {{readTime}} </div>
+                    <div :class="{'overline': $vuetify.breakpoint.smAndDown, 'caption': $vuetify.breakpoint.mdAndUp}" class="font-weight-black font-3" style="color: #565656;"> {{new Date(filteredPost[0].date).toDateString()}} · {{readTime}} </div>
                 </v-container>
             </v-col>
 
