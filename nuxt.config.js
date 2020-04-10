@@ -1,10 +1,9 @@
 import colors from 'vuetify/es5/util/colors'
-require('dotenv').config()
 
 export default {
   mode: 'universal',
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+    baseUrl: process.env.HOST || 'http://localhost:3000'
   },
   /*
   ** Headers of the page
