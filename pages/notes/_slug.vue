@@ -129,6 +129,7 @@ export default {
 
     mounted() {
         Prism.highlightAll()
+        console.log(process.env.baseUrl)
     },
 
     middleware: [
