@@ -83,6 +83,37 @@
               </v-card>
 
             </v-col>
+
+            <v-col sm="9" md="4" lg="4" class="mx-auto"
+                data-aos="fade-right"
+                :data-aos-delay= "200"
+                data-aos-duration="750"
+                data-aos-offset= "120"
+              >
+              <v-card
+                class="mx-auto ma-4 px-7"
+                style="border-radius: 0px;color: #2F495E"
+                elevation="2"
+                loading="green"
+              >
+                <v-img
+                  src="/tarot.svg"
+                  height=""
+                  class="mx-auto mt-7"
+                >
+                </v-img>
+
+                <v-card-title class="text-capitalize px-0 font-2" style="color: #2F495E">
+                  cooking up something awesome!
+                </v-card-title>
+
+                <v-card-text class="font-2" style="color: #2F495E; font-size: 12px">
+                  Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+                </v-card-text>
+
+              </v-card>
+
+            </v-col>
           </v-row>
         </v-container>
       </v-col>
@@ -159,4 +190,5 @@ export default {
       font-family: 'Major Mono Display', cursive !important;
       font-weight: 900;
   }
+
 </style>
